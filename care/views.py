@@ -99,3 +99,25 @@ def message_sent(request):
     return render(request,template_name='message_confirmation.html')
 def appointment(request):
     return render(request,template_name='Appointmentreceived.html')
+
+
+def login_view(request):
+    if request.method = "POST":
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            return redirect('home')
+        else:
+            messages.info(request, 'Username or password is incorrect')
+
+    context = {}
+    return render(request, 'login.html', context)
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
