@@ -102,7 +102,7 @@ def appointment(request):
 
 
 def login_view(request):
-    if request.method = "POST":
+    if request.method == "POST":
         username = request.POST.get('username')
         password = request.POST.get('password')
 
