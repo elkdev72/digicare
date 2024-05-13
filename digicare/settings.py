@@ -29,7 +29,8 @@ INSTALLED_APPS = [
     'care',
     'django_daraja',
     'import_export',
-    'whitenoise.runserver_nostatic'
+    'whitenoise.runserver_nostatic',
+    'users',
 ]
 
 MIDDLEWARE = [
