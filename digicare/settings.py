@@ -4,7 +4,7 @@ import django_heroku
 import dj_database_url
 import django.core.mail.backends.smtp
 import environ
-SITE
+SITE_ID = 1
 env = environ.Env(
     # set casting, default value
     DEBUG=(bool, False)
