@@ -31,6 +31,12 @@ INSTALLED_APPS = [
     'import_export',
     'whitenoise.runserver_nostatic',
     'users',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+    
 ]
 
 MIDDLEWARE = [
