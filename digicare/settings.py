@@ -53,7 +53,8 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 )
-
+LOGIN_REDIRECT = '/'
+LOGOUT_REDIRECT ='/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
