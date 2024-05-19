@@ -1,5 +1,5 @@
-from django.shortcuts import render
-f
+from django.shortcuts import render,redirect
+from django.contrib.auth import logout
 # Create your views here.
 def register(request):
     if request.method == "POST":
@@ -13,3 +13,7 @@ def register(request):
         else:
     form = UserCreationForm()
     return render(request, 'accounts/register.html', {'form': form})
+
+def logout(request):
+    logout(request)
+    return redirect('login')
